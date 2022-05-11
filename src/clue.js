@@ -129,12 +129,12 @@ console.log(`pickMystery`,pickMystery())
 
 function revealMystery() {
 
-pickMystery() 
+let finalObject=pickMystery() 
 
-console.log(`textpickMystery`,pickMystery())
 
-return `${newObject[0].firstName} ${newObject[0].lastName} killed Mr. Boddy using the ${newObject[1]} in the ${newObject[2]}`
 
+return `${finalObject.random[0].firstName} ${finalObject.random[0].lastName} killed Mr. Boddy using the ${finalObject.random[2].name} in the ${finalObject.random[1].name}`
+//  return finalObject.random[0].code;
 
 }
 console.log(revealMystery())
