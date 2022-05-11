@@ -117,23 +117,23 @@ function pickMystery() {
 let randomSuspect=selectRandom(suspectsArray)
 let randomRoom=selectRandom(roomsArray)
 let randomWeapon=selectRandom(weaponsArray)
-let random =[]
-random.push(randomSuspect)
-random.push(randomRoom)
-random.push(randomWeapon)
-return random
+let newObject={}
+newObject.random =[randomSuspect,randomRoom,randomWeapon]
+
+return newObject
 
 }
-console.log(pickMystery())
+console.log(`pickMystery`,pickMystery())
 
 // ITERATION 3
 
 function revealMystery() {
 
-  pickMystery() 
+pickMystery() 
 
+console.log(`textpickMystery`,pickMystery())
 
-return `${randomSuspect.firstName} ${randomSuspect.lastName} killed Mr. Boddy using the ${randomWeapon.name} in the ${randomRoom.name}`
+return `${newObject[0].firstName} ${newObject[0].lastName} killed Mr. Boddy using the ${newObject[1]} in the ${newObject[2]}`
 
 
 }
